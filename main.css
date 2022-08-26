@@ -1,0 +1,93 @@
+
+  #header{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #63abde;
+    text-align: center;
+    color:white;
+    position:relative;
+    width:100%;
+    height: 60px;
+    list-style: none;
+  }
+  h1{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+    background-color: #63abde;
+  }
+  #header li{
+    margin-right: 0px;
+  }
+
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+  }
+  .sidebar i{
+    display: none;
+  }
+  
+  .sidebar {
+    margin: 0vh;
+    padding: 0vh;
+    width: 200px;
+    background-color: #f1f1f1;
+    position:fixed;
+    top: 50px;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+   
+  .sidebar a.active {
+    background-color: #63abde;
+    color: white;
+  }
+  
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+  .wrapper {
+   margin-left: 200px;
+   margin-top: 0px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+/*   
+  @media screen and (max-width: 1000px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  } */
+  
+  @media screen and (max-width: 700px) {
+    .sidebar a span {
+        display:none;
+    }
+    .sidebar i{
+        display:block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    }
+    .sidebar{
+    width: 70px;
+    }
+    .wrapper{
+        margin-left: 70px;
+    }
+  }
