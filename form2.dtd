@@ -1,0 +1,8 @@
+<!ELEMENT register (firstname,lastname,usermail,password,repassword)>
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT lastname (#PCDATA)>
+<!ELEMENT usermail (#PCDATA)>
+<!ELEMENT password (#PCDATA)>
+<!ELEMENT repassword (#PCDATA)>
+<!ATTLIST usermail id CDATA #REQUIRED>
+<!ATTLIST password id CDATA #IMPLIED>

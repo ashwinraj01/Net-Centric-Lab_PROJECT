@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<!DOCTYPE register SYSTEM "form2.dtd">
+<register>
+    <firstname></firstname>
+    <lastname></lastname>
+    <usermail id="usermail"></usermail>
+    <password id="password"></password>
+    <repassword></repassword>
+</register>
