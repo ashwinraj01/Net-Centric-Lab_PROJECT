@@ -30,8 +30,8 @@
           <div class="box">
             <div class="content">
               <h2>01</h2>
-              <h3>Card One</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
+              <h3 id="card1">Card One</h3>
+              <p id="question1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
               <a href="#">Read More</a>
             </div>
           </div>
@@ -41,8 +41,8 @@
           <div class="box">
             <div class="content">
               <h2>02</h2>
-              <h3>Card Two</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
+              <h3 id="card2">Card Two</h3>
+              <p id="question2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
               <a href="#">Read More</a>
             </div>
           </div>
@@ -52,8 +52,8 @@
           <div class="box">
             <div class="content">
               <h2>03</h2>
-              <h3>Card Three</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
+              <h3 id="card3">Card Three</h3>
+              <p id="question3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
               <a href="#">Read More</a>
             </div>
           </div>
@@ -64,8 +64,8 @@
           <div class="box">
             <div class="content">
               <h2>01</h2>
-              <h3>Card One</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
+              <h3 id="card4">Card One</h3>
+              <p id="question4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
               <a href="#">Read More</a>
             </div>
           </div>
@@ -75,8 +75,8 @@
           <div class="box">
             <div class="content">
               <h2>02</h2>
-              <h3>Card Two</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
+              <h3 id="card5">Card Two</h3>
+              <p id="question5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
               <a href="#">Read More</a>
             </div>
           </div>
@@ -86,8 +86,8 @@
           <div class="box">
             <div class="content">
               <h2>03</h2>
-              <h3>Card Three</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
+              <h3 id="card6">Card Three</h3>
+              <p id="question6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
               <a href="#">Read More</a>
             </div>
           </div>
@@ -158,40 +158,53 @@
         <p id="myData"></p>
       </div>
       
+      <script>
+        fetch('questions.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData(data) {
+            for (var i = 0; i < data.length; i++) {
+                var card = document.getElementById("card"+(i+1));
+                var question = document.getElementById("card"+(i+1));
+                card.innerHTML=(data[i].category);
+                question.innerHTML=(data[i].question);
+                mainContainer.appendChild(div);
+            }
+        }
 
 
+        // Add active class to the current button (highlight it)
+        var header = document.getElementsByClassName("sidebar");
+        var btns = header.getElementsByClassName("navbutton");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace("active", "navbutton");
+          this.className = this.className.replace("navbutton","active");
+          });
+        }
+        var modal = document.getElementById('id01');
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        var modal = document.getElementById('id02');
 
-
-
-
-
-
-
-//         // Add active class to the current button (highlight it)
-//         var header = document.getElementsByClassName("sidebar");
-//         var btns = header.getElementsByClassName("navbutton");
-//         for (var i = 0; i < btns.length; i++) {
-//           btns[i].addEventListener("click", function() {
-//           var current = document.getElementsByClassName("active");
-//           current[0].className = current[0].className.replace("active", "navbutton");
-//           this.className = this.className.replace("navbutton","active");
-//           });
-//         }
-//         var modal = document.getElementById('id01');
-//         // When the user clicks anywhere outside of the modal, close it
-//         window.onclick = function(event) {
-//             if (event.target == modal) {
-//                 modal.style.display = "none";
-//             }
-//         }
-//         var modal = document.getElementById('id02');
-
-// // When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   }
-// }
-        // </script>
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+        </script>
 </body>
 </html>
