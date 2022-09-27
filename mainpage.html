@@ -161,30 +161,30 @@
       <script>
 
         // Add active class to the current button (highlight it)
-        var header = document.getElementsByClassName("sidebar");
-        var btns = header.getElementsByClassName("navbutton");
-        for (var i = 0; i < btns.length; i++) {
-          btns[i].addEventListener("click", function() {
-          var current = document.getElementsByClassName("active");
-          current[0].className = current[0].className.replace("active", "navbutton");
-          this.className = this.className.replace("navbutton","active");
-          });
-        }
-        var modal = document.getElementById('id01');
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-        var modal = document.getElementById('id02');
+//         var header = document.getElementsByClassName("sidebar");
+//         var btns = header.getElementsByClassName("navbutton");
+//         for (var i = 0; i < btns.length; i++) {
+//           btns[i].addEventListener("click", function() {
+//           var current = document.getElementsByClassName("active");
+//           current[0].className = current[0].className.replace("active", "navbutton");
+//           this.className = this.className.replace("navbutton","active");
+//           });
+//         }
+//         var modal = document.getElementById('id01');
+//         // When the user clicks anywhere outside of the modal, close it
+//         window.onclick = function(event) {
+//             if (event.target == modal) {
+//                 modal.style.display = "none";
+//             }
+//         }
+//         var modal = document.getElementById('id02');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// }
 
             fetch('questions.json')
             .then(function (response) {
