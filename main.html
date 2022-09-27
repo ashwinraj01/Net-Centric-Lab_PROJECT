@@ -159,26 +159,6 @@
       </div>
       
       <script>
-        fetch('questions.json')
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (data) {
-                appendData(data);
-            })
-            .catch(function (err) {
-                console.log('error: ' + err);
-            });
-        function appendData(data) {
-            for (var i = 0; i < data.length; i++) {
-                var card = document.getElementById("card"+(i+1));
-                var question = document.getElementById("card"+(i+1));
-                card.innerHTML=(data[i].category);
-                question.innerHTML=(data[i].question);
-                mainContainer.appendChild(div);
-            }
-        }
-
 
         // Add active class to the current button (highlight it)
         var header = document.getElementsByClassName("sidebar");
@@ -205,6 +185,26 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+fetch('questions.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData(data) {
+            for (var i = 0; i < data.length; i++) {
+                var card = document.getElementById("card"+(i+1));
+                var question = document.getElementById("question"+(i+1));
+                card.innerHTML=(data[i].category);
+                question.innerHTML=(data[i].question);
+            }
+        }
+
         </script>
 </body>
 </html>

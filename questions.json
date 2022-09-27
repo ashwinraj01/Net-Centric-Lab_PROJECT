@@ -1,25 +1,31 @@
 [
     {
+        "id":"01",
         "category": "maths",
         "question": "A coin is loaded so that the probability of a head occur getting all heads or all tails?"
     },
     {
+        "id":"02",
         "category": "maths",
         "question": "Prove { (8n-7)/n} n=1 to infinity is an increasing sequence."
     },
     {
+        "id":"03",
         "category": "maths",
         "question": "10, n = 1 20, n = 2 46, п — 3 6T (п — 1) — 117(n - 2) + 6T(п — 3), п >3 T(n) |3D |"
     },
     {
+        "id":"04",
         "category": "physics",
         "question": "The kinetic energy of an electron with de-Broglie wavelength of 0.3 nanometer is"
     },
     {
+        "id":"05",
         "category": "physics",
         "question": "Inside a cylinder closed at both ends is a movable piston. On one side of the piston is a mass m of a gas, and on the other side a mass 2m of the same gas. What fraction of volume of the cylinder will be occupied by the larger mass of the gas when the piston is in equilibrium? The temperature is the same throughout."
     },
     {
+        "id":"06",
         "category": "physics",
         "question": "Which of the following parameters does not characterize the thermodynamic state of matter?"
     }
