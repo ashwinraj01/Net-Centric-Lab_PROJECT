@@ -186,7 +186,7 @@ window.onclick = function(event) {
   }
 }
 
-fetch('questions.json')
+            fetch('questions.json')
             .then(function (response) {
                 return response.json();
             })
@@ -197,7 +197,9 @@ fetch('questions.json')
                 console.log('error: ' + err);
             });
         function appendData(data) {
+          console.log(data);
             for (var i = 0; i < data.length; i++) {
+              
                 var card = document.getElementById("card"+(i+1));
                 var question = document.getElementById("question"+(i+1));
                 card.innerHTML=(data[i].category);
