@@ -1,12 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="faq.css" rel="stylesheet" />
 </head>
 <body>
-    
+
+<h3>Ask Question</h3>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">Question</label>
+    <input type="text" id="Question" name="Question" placeholder="Your Question....">
+
+    <label for="topic">Topic</label>
+    <select id="topic" name="topic">
+        <option value="English">English</option>
+        <option value="Regional Language(s)">Regional Language(s)</option>
+        <option value="Maths">Maths</option>
+        <option value="Science">Science</option>
+        <option value="Social Sciences">Social Sciences</option>
+        <option value="Physical Education">Physical Education</option>
+        <option value="Computer Basics">Computer Basics</option>
+        <option value="Arts (Drawing)">Arts (Drawing)</option>
+        <option value="History">History</option>
+        <option value="Languages and linguistics">Languages and linguistics</option>
+        <option value="Literature">Literature</option>
+        <option value="Religion and Religious studies">Religion and Religious studies</option>
+        <option value="Political Science">Political Science</option>
+        <option value="Psychology">Psychology</option>
+    </select>
+    <label for="Custom topic">Custom Topic</label>
+    <input type="text" id="topic" name="topic" placeholder="Your Topic (if you can't find it in the dropdown box)....">
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
 </body>
 </html>
